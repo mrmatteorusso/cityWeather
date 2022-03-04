@@ -1,4 +1,4 @@
-# CityWeather
+# City Weather
 
 # Team-Generator
 
