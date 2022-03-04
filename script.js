@@ -19,7 +19,7 @@ let weather = {
         }
         catch (error) {
             console.error(error)
-            document.getElementById("error-message").innerText = `City of '${city}' does not exist, please enter a valid one`
+            document.getElementById("error-message").innerText = `'${city}' not found, please try again...`
         }
     },
 
@@ -29,8 +29,8 @@ let weather = {
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
         document.querySelector(".city").innerText = name;
-        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-        document.querySelector(".description").innerText = description;
+        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+        // document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = Math.round(temp * 10) / 10 + " °C";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".wind").innerText = "Wind speed: " + speed + " km/h";

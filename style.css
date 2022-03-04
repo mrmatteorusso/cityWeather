@@ -94,3 +94,25 @@ h1.temp {
 #error-message {
   color: rgb(175, 44, 44);
 }
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-details {
+  /* background-color: chocolate; */
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
