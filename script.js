@@ -1,3 +1,4 @@
+
 let weather = {
 
     API_KEY: "233cf4f1125c14c45a16dadd8ef4e20c",
@@ -18,7 +19,7 @@ let weather = {
         }
         catch (error) {
             console.error(error)
-            document.getElementById("error-message").innerText = `'${city}' not found, please try again...`
+            document.getElementById("error-message").innerText = `City of '${city}' does not exist, please enter a valid one`
         }
     },
 
@@ -38,6 +39,7 @@ let weather = {
     },
 
     fetchForecastWeather: async function (data) {
+        console.log(data)
         const { lon, lat } = data.coord;
         const url = `${this.API_URL}/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${this.API_KEY}`;
         const response = await fetch(url);
@@ -63,11 +65,11 @@ let weather = {
 
     createForecastWeather: function (forecastData) {
         console.log("this is forecastData", forecastData)
-        const childElem = document.createElement('div');
+
+        const parentElem = document.createElement('div');
         const childChildElem1 = document.createElement('p');
         let childChildElem2 = document.createElement('img');
-        childChildElem2.setAttribute("src", "0");
-        childChildElem2.setAttribute("id", "weekIcon");
+        childChildElem2.setAttribute("src", "");
 
         const dateInMilliseconds = forecastData.dt * 1000;
         const date = new Date(dateInMilliseconds);
@@ -78,10 +80,11 @@ let weather = {
 
         childChildElem2.src = `https://openweathermap.org/img/wn/${forecastData.weather[0].icon}.png`;
         childChildElem1.appendChild(text)
-        childElem.appendChild(childChildElem1)
-        childElem.appendChild(childChildElem2)
-        return childElem;
+        parentElem.appendChild(childChildElem1)
+        parentElem.appendChild(childChildElem2)
+        return parentElem;
     },
+
 
     search: function () {
         const searchBarElement = document.querySelector(".search-bar");
@@ -99,3 +102,5 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
 
 
 weather.fetchWeather("London");
+
+module.exports = weather

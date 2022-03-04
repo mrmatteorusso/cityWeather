@@ -1,0 +1,23 @@
+{
+  "name": "cityweather",
+  "version": "1.0.0",
+  "description": "- [Description](#description)\r - [How to use it](#how-to-use-it)\r - [Contributing](#contributing)\r - [Reference](#reference)\r - [License](#license)\r - [Contact](#contact)",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmatteorusso/cityWeather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrmatteorusso/cityWeather/issues"
+  },
+  "homepage": "https://github.com/mrmatteorusso/cityWeather#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
