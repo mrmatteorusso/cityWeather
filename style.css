@@ -94,3 +94,33 @@ h1.temp {
 #error-message {
   color: rgb(175, 44, 44);
 }
+
+.weather {
+  /* background-color: aqua; */
+}
+
+.main-info {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+
+  /* background-color: brown; */
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: chartreuse; */
+}
+
+.more-details {
+  /* background-color: chocolate; */
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
