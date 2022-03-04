@@ -1,7 +1,5 @@
 # City Weather
 
-# Team-Generator
-
 ### Table of Contents:
 
 - [Description](#description)
