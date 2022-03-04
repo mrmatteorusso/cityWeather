@@ -1,5 +1,8 @@
 # City Weather
 
+![cityWeather](https://user-images.githubusercontent.com/80893528/156810239-16f70d09-f217-408e-b4f3-4b455b04bd7b.gif)
+
+
 ### Table of Contents:
 
 - [Description](#description)
