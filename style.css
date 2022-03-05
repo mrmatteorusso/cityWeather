@@ -3,22 +3,31 @@
   color: white;
   padding: 2em;
   border-radius: 30px;
-  max-width: 400px;
   margin: 1em;
 }
 
-.forecast {
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.forecast div {
+.search {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem 0;
+  justify-content: center;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 0;
+  border-radius: 24px;
+  background: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: 100%;
+  text-align: center;
+}
+
+#error-message {
+  color: rgb(175, 44, 44);
 }
 
 .main-info {
@@ -28,24 +37,39 @@
   padding: 0 1rem;
 }
 
-.flex {
+.weather.loading {
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  content: "Loading...";
+  color: white;
+}
+
+.forecast {
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.forecast div {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.forecast div p {
+  font-size: 0.7rem;
+  align-content: center;
+  text-align: center;
 }
 
 .more-details {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 @media (min-width: 400px) {
@@ -61,104 +85,31 @@
   }
 
   .card {
-    background: rgba(0, 0, 0, 0.816);
-    background: rgba(99, 19, 19, 0.816);
-    color: white;
-    padding: 2em;
-    border-radius: 30px;
-    width: 100%;
-    max-width: 620px;
-    margin: 1em;
-  }
-
-  input.search-bar {
-    border: none;
-    outline: none;
-    padding: 0.4em 1em;
-    border-radius: 24px;
-    background: #7c7c7c2b;
-    color: white;
-    font-family: inherit;
-    font-size: 105%;
-    width: 100%;
-    text-align: center;
-  }
-
-  h1.temp {
-    margin: 0;
-    margin-bottom: 0.4em;
-  }
-
-  .flex {
-    display: flex;
-    align-items: center;
-  }
-
-  .description {
-    text-transform: capitalize;
-  }
-
-  .weather.loading {
-    max-height: 20px;
-    position: relative;
-  }
-
-  .weather.loading:after {
-    background-color: aqua;
-    content: "Loading...";
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 20px;
-  }
-
-  .forecast {
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .forecast div {
-    display: flex;
-    flex-direction: column;
-    width: 14.27%;
-    justify-content: space-around;
-  }
-
-  .forecast div p:first-child {
-    font-size: 0.7rem;
-    align-content: center;
-    text-align: center;
-  }
-
-  .forecast div p:last-child {
-    font-size: 1.3rem;
-  }
-
-  #error-message {
-    color: rgb(175, 44, 44);
+    width: 480px;
   }
 
   .main-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 
-  .flex {
-    display: flex;
+  .forecast {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .forecast div {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
   }
 
   .more-details {
-    display: flex;
+    padding: 0 1.5rem;
+    flex-direction: row;
     justify-content: space-around;
     justify-content: space-between;
-    padding: 0 1rem;
+    font-size: 0.5 rem;
   }
 }
