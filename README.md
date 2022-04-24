@@ -5,16 +5,12 @@
 
 ### Table of Contents:
 
-- [City Weather](#city-weather)
-    - [Table of Contents:](#table-of-contents)
-  - [Description](#description)
-      - [Technologies](#technologies)
-  - [How to use it](#how-to-use-it)
-  - [Setup](#setup)
-  - [Contributing](#contributing)
-  - [References](#references)
-  - [License](#license)
-  - [Contact](#contact)
+- [Description](#description)
+- [How to use it](#how-to-use-it)
+- [Contributing](#contributing)
+- [Reference](#reference)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
@@ -38,22 +34,6 @@ The programme uses APIs from openweathermap.org and deploys its results as text 
 - #1 Enter a city
 - #2 Press enter
 - #3 Enjoy!
-
----
-
-## Setup
-
-First you need to install the dependencies
-
-```
-npm i
-```
-
-Once that is done you can start the app with
-
-```
-npm start
-```
 
 ---
 
